@@ -8,7 +8,7 @@ before_install:
   - docker build -t xhavier4/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true xhavier4/react-test npm run test
+  -docker run <complex> npm run test -- --watchAll=false
 
 after_success:
   - docker build -t xhavier4/multi-client ./client
